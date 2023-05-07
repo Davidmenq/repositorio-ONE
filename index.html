@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Encriptador</title>
 </head>
 
@@ -16,6 +17,7 @@
         <fieldset>
             <section>
                 <img src="imagenes/Muñeco.svg" alt="muñeco buscando texto" />
+                <textarea class="mensaje-encriptado" cols="30" rows="5"></textarea>
                 <label for="">Ningún mensaje fue encontrado</label>
                 <label for="">Ingresa el texto que desees encriptar o desencriptar</label>
                 <button>Copiar</button>
@@ -23,14 +25,16 @@
         </fieldset>
     </aside>
     <main>
-        <fieldset>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+        <section>
+            <textarea class="ingresarTexto" cols="30" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
             <img src="imagenes/alerta.svg" alt="logo">
             <label for="">Solo letras minúsculas y sin acentos</label>
-            <button>Encriptar</button>
+            <button onclick="mostrar()">Encriptar</button>
             <button>Desencriptar</button>
-        </fieldset>
+        </section>
     </main>
+    <script src="encriptador.js"></script>
 </body>
+
 
 </html>
