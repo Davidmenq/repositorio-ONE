@@ -14,7 +14,6 @@ let codigosInversos = {
     "ober" : "o",
     "ufat" : "u"
 }
-almacenTexto
 
 function encriptar(){
     let almacenTexto=ingresarTexto.value;
@@ -35,3 +34,10 @@ function desencriptar(){
     almacenTexto = almacenTexto.replaceAll("ufat",codigosInversos.ufat);
     escribirTexto.value=almacenTexto;
 }
+
+function copiarTexto(){
+    navigator.clipboard.writeText(escribirTexto.value);
+    escribirTexto.value="";
+}
+
+
