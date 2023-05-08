@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+:root{
+--pagina-color:#0A3871;
+--paginaActiva-color:aqua;
+}
 
 *{
     margin:0;
@@ -10,9 +14,10 @@
 body{
     display:grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
     grid-template-areas:
-    ". header header aside ." 
+    "header . . aside ."
+    ". main main aside ." 
     ". main main aside ." 
     ". main main aside ." 
     ". main main aside ." 
@@ -23,6 +28,10 @@ body{
 
 header{
     grid-area:header;
+    display:grid;
+    justify-content: end;
+    align-content:center;
+    padding-right:20%;
 }
 
 main{
@@ -31,29 +40,86 @@ main{
 
 aside{
     grid-area:aside;
+    height: 100%;
 }
 
 footer{
     grid-area:footer;
+    align-content:end;
 }
 
 
 .presentacion{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     background:white;
     width:100%;
+    height: 100%;
     border:none;
     border-radius:20px;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
     margin:1rem;
 
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(6, 0.5fr);
+ }
+
+.areaImagen{
+    grid-column: 1 / 2;
+    grid-row:2 / 5;
+    display:flex;
+    justify-content: center;
 }
-.presentacion p{
+.areaImagen img{
+    width: 90%;
+}
+
+.areaTextoPresentado{
+    grid-column: 1 / 2;
+    grid-row:1 / 6;
+    width: 80%;
+    height: 90%;
+    margin:auto;
+    display:flex;
+    align-items: flex-start;
+}
+.mensaje-encriptado{
+    background:rgba(255,255,255,0);
+    color:black;
+    border:none;
+    font-size: 1.2rem;
+    width:90%;
+    height: 100%;
+    margin:0px auto;
+    resize:none;
+}
+
+.areaAlerta1{
+    grid-column: 1 / 2;
+    grid-row:4 / 5;
+    width: 80%;
+    height: 100%;
+    margin:auto;
+    display:flex;
+    align-items: flex-end;
+    text-align: center;
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.areaAlerta2{
+    grid-column: 1 / 2;
+    grid-row:5 / 6;
     width: 80%;
     margin:auto;
+    font-size: 1rem;
     text-align: center;
+}
+.areaBoton3{
+    grid-column: 1 / 2;
+    grid-row:6 / 7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .operaciones{
@@ -70,6 +136,7 @@ footer{
     border:none;
     font-size: 1.5rem;
     width: 100%;
+    resize:none;
 }
 
 .operaciones__botones{
@@ -102,16 +169,6 @@ footer{
     color:#0A3871;  
 }
 
-.areaBoton3{
-    display:flex;
-    justify-content: center;
-    width: 100%;
-}
 
-.mensaje-encriptado{
-    background:rgba(255,255,255,0);
-    color:black;
-    border:none;
-    font-size: 1.2rem;
-    width:90%;
-}
+
+

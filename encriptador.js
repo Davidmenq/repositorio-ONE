@@ -37,6 +37,7 @@ function desencriptar(){
 
 function copiarTexto(){
     navigator.clipboard.writeText(escribirTexto.value);
+    ingresarTexto.value="";
     escribirTexto.value="";
 }
 
