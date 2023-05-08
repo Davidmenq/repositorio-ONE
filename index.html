@@ -20,7 +20,7 @@
                 <textarea class="mensaje-encriptado" cols="30" rows="5"></textarea>
                 <label for="">Ningún mensaje fue encontrado</label>
                 <label for="">Ingresa el texto que desees encriptar o desencriptar</label>
-                <button>Copiar</button>
+                <button onclick="copiar()">Copiar</button>
             </section>
         </fieldset>
     </aside>
@@ -29,8 +29,8 @@
             <textarea class="ingresarTexto" cols="30" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
             <img src="imagenes/alerta.svg" alt="logo">
             <label for="">Solo letras minúsculas y sin acentos</label>
-            <button onclick="mostrar()">Encriptar</button>
-            <button>Desencriptar</button>
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button>
         </section>
     </main>
     <script src="encriptador.js"></script>

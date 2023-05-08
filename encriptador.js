@@ -1,22 +1,37 @@
-let ingresar = document.querySelector(".ingresarTexto");
-let escribir = document.querySelector(".mensaje-encriptado");
+let ingresarTexto = document.querySelector(".ingresarTexto");
+let escribirTexto = document.querySelector(".mensaje-encriptado");
 let codigos = {
     "a" : "ai",
-    "e" : "",
-    "i" : "",
-    "o" : "",
-    "u" : ""
+    "e" : "enter",
+    "i" : "imes",
+    "o" : "ober",
+    "u" : "ufat"
+}
+let codigosInversos = {
+    "ai" : "a",
+    "enter" : "e",
+    "imes" : "i",
+    "ober" : "o",
+    "ufat" : "u"
+}
+almacenTexto
+
+function encriptar(){
+    let almacenTexto=ingresarTexto.value;
+    almacenTexto = almacenTexto.replaceAll("e",codigos.e);
+    almacenTexto = almacenTexto.replaceAll("i",codigos.i);
+    almacenTexto = almacenTexto.replaceAll("a",codigos.a);
+    almacenTexto = almacenTexto.replaceAll("o",codigos.o);
+    almacenTexto = almacenTexto.replaceAll("u",codigos.u);
+    escribirTexto.value=almacenTexto;
 }
 
-
-function mostrar(){
-    const letra = codigos.a;
-    //escribir.value=ingresar.value;
-    escribir.value=ingresar.value.replaceAll("a",letra);
-    console.log(escribir.value);
-}
-
-function encriptar(textoIngresado){
-
-    return prueba;
+function desencriptar(){
+    let almacenTexto=ingresarTexto.value;
+    almacenTexto = almacenTexto.replaceAll("enter",codigosInversos.enter);
+    almacenTexto = almacenTexto.replaceAll("imes",codigosInversos.imes);
+    almacenTexto = almacenTexto.replaceAll("ai",codigosInversos.ai);
+    almacenTexto = almacenTexto.replaceAll("ober",codigosInversos.ober);
+    almacenTexto = almacenTexto.replaceAll("ufat",codigosInversos.ufat);
+    escribirTexto.value=almacenTexto;
 }
